@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute','signmyApp']);
+var app = angular.module('myApp', ['ngRoute','signmyApp','blogmyApp','forummyApp']);
 
 app.config(function($routeProvider) {
   $routeProvider
@@ -15,12 +15,12 @@ app.config(function($routeProvider) {
  
   .when('/blog', {
     templateUrl : 'html/Blog.html',
-    controller  : 'blog'
+    controller  : 'blogcntrl'
  })
  
-  .when('/forum', {
-    templateUrl : 'html/forum.html',
-    controller  : 'Forumcontroller'
+  .when('/Forum', {
+    templateUrl : 'html/Forum.html',
+    controller  : 'forumctrl'
  })
 
 
