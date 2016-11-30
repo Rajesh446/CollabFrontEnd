@@ -20,7 +20,7 @@ app.config(function($routeProvider) {
  
   .when('/Forum', {
     templateUrl : 'html/Forum.html',
-    controller  : 'forumctrl'
+    controller  : 'forumcntrl'
  })
 
 

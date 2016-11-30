@@ -1,8 +1,8 @@
-var app = angular.module('forummyApp',[]);
-app.controller('forumcntrl', [ '$scope', '$http', function($scope, $http) {
+var fapp = angular.module('forummyApp',[]);
+fapp.controller('forumcntrl', [ '$scope', '$http', function($scope, $http) {
 var BASE_URL = 'http://localhost:8081/MyChat';
 
-$scope.getAllBlogs= function() {
+$scope.getAllForum= function() {
 console.log("get all forums")
 $http({
 method : 'GET',
@@ -19,22 +19,24 @@ console.log("create forum")
 
 $scope.forum = { 
 id:$scope.id,
-tittle : $scope.tittle,
+Description : $scope.Description,
 userid:$scope.userid,
 doc:$scope.doc,
-content : $scope.content,
+topic:$scope.topic,
+name : $scope.name,
 }
 $http({
 method : 'POST',
-url : BASE_URL + '/CreateForum',
+url : BASE_URL+'/CreateForum',
 data : $scope.forum
 }).success(function(data, status, headers, config) {
 $scope.id='';
-$scope.tittle='';
+$scope.Description='';
 $scope.userid='';
 $scope.doc='';
-$scope.content='';
-$scope.getAllBlogs();
+$scope.name='';
+$scope.topic='';
+$scope.getAllForum();
 }).error(function(data,status,headers,config){
 alert("error");
 });
@@ -44,12 +46,13 @@ $http({
 method:'DELETE',
 url:BASE_URL+'/DeleteForum/'+id
 }).success(function(data,status,headers,config){
-$scope.getAllBlogs();
+$scope.getAllForum();
 })
 };
-$scope.editforum=function(id,tittle,content){
+$scope.editforum=function(id,name,topic,Description){
 $scope.id=id;
-$scope.tittle=tittle;
-$scope.content=content;
+$scope.name=name;
+$scope.topic=topic;
+$scope.Description=Description;
 }
 }]);
