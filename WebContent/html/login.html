@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="Loginctrl.js"></script>
+<script type="text/javascript" src="LoginService.js"></script>
+
+</head>
+<body data-ng-app="myApp">
+<div data-ng-controller="LoginController">
+{{islogged}}</div>
+ <div class="wrapper">
+    <form class="form-signin" action="" data-ng-submit="vm.login()">       
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="text" class="form-control" name="username" placeholder="UserName" required="" autofocus="" data-ng-model="vm.username"/>
+      <input type="password" class="form-control" name="password" placeholder="Password" required="" data-ng-model="vm.password"/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>login Forms</title>
 <link rel="stylesheet"
@@ -37,7 +69,10 @@
 										value="Remember Me"> Remember Me
 									</label>
 								</div>
+								 <label class="checkbox">
+								
 								<button type="submit" class="btn btn-lg btn-success btn-block"
+
 									data-ng-click="submit()">login</button>
 									</fieldset>
 						</div>
@@ -48,11 +83,12 @@
 
 	</div>
 	<script src="js/LoginCtrl.js"></script>
+	<script src="js/Login.js"></script>
 	
-</body>
+</body> 
 </html>
 
-
+ -->
 
 
 

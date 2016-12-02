@@ -24,7 +24,7 @@ userid:$scope.userid,
 doc:$scope.doc,
 topic:$scope.topic,
 name : $scope.name,
-}
+} 
 $http({
 method : 'POST',
 url : BASE_URL+'/CreateForum',
