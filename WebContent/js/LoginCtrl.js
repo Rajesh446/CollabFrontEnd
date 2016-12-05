@@ -24,7 +24,7 @@
                $rootScope.username=vm.username;
               $rootScope.islogged=true;
                 	AuthenticationService.SetCredentials(vm.username, vm.password);
-                    $location.path('/home');
+                    $location.path('/Home');
                   $rootScope.islogged=true;
                 	
                 } else {
@@ -40,7 +40,7 @@
         	AuthenticationService.Logout(function(response){
         		if(response.success){
         			AuthenticationService.ClearCredentials();
-        			$location.path('/home');
+        			$location.path('#/');
         			$rootScope.islogged=false;
         			
         		}else{

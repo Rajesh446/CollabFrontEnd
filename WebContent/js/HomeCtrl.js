@@ -1,7 +1,13 @@
-var app = angular.module('myApp', ['ngRoute','signmyApp','blogmyApp','forummyApp']);
+var app = angular.module('myApp', ['ngRoute','ngCookies','signmyApp','blogmyApp','forummyApp',]);
 
 app.config(function($routeProvider) {
   $routeProvider
+  
+  .when('/Home', {
+	    templateUrl : 'html/Home.html',
+	    controller  : 'LoginController',
+	    controllerAs: 'vm'
+	 })
 
    .when('/register', {
     templateUrl : 'html/Signup.html',
@@ -24,6 +30,10 @@ app.config(function($routeProvider) {
     templateUrl : 'html/Forum.html',
     controller  : 'forumcntrl'
  })
+ 	.when("/users",{
+    	templateUrl: "html/Users.html",
+    	controller:'userctrl'
+    })
 
 
   .otherwise({redirectTo: '/'});
