@@ -34,6 +34,16 @@ app.config(function($routeProvider) {
     	templateUrl: "html/Users.html",
     	controller:'userctrl'
     })
+    
+    .when("/myfriends",{
+    	templateUrl: "html/friend.html",
+    	controller:'myfriendctrl'
+    })
+     .when("/newrequest",{
+    	templateUrl: "html/request.html",
+    	controller:'myfriendctrl'
+    })
+
 
 
   .otherwise({redirectTo: '/'});
