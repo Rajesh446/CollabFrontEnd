@@ -9,12 +9,13 @@
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.1/sockjs.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
- 
+ <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
  
    <script src="js/HomeCtrl.js"></script>
    <script src="js/SignupCtrl.js"></script>
    <script src="js/BlogCtrl.js"></script> 
    <script src="js/ForumCtrl.js"></script>
+   <script src="js/CommetCtrl.js"></script>
    <script src="js/LoginCtrl.js"></script>
    <script src="js/LoginService.js"></script>
    <script src="js/UsersCtrl.js"></script>
@@ -35,6 +36,18 @@
 				<a href="#/Forum">Forum</a>
 				<a href="#/users">Find Friends</a>
 				<!-- <a href="#/myfriends">Friends</a> -->
+				
+				
+				 <ul class="nav navbar-nav navbar-right">
+     <li><a href="#register" data-ng-hide="globals.currentUser.islogged"><i class="glyphicon glyphicon-user"></i></a></li>
+     <li><a href="#login" data-ng-hide="globals.currentUser.islogged"><i class="glyphicon glyphicon-log-in"></i></a></li>
+     <li style="padding-top:15px;" data-ng-show="globals.currentUser.islogged">Welcome:{{globals.currentUser.username}}</li>
+     <li data-ng-show="globals.currentUser.islogged"><a href="#myprofile">My Profile</a></li>
+     <li data-ng-show="globals.currentUser.islogged"><a href="#/" data-ng-click="vm.logout()">logout</a></li>
+    </ul>{{currentuser.id}}
+  </div><!-- /.navbar-collapse -->
+</nav>
+</div>
 		
 	<div data-ng-view></div>
 	

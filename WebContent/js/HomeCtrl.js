@@ -1,5 +1,5 @@
-var app = angular.module('myApp', ['ngRoute','ngCookies','signmyApp','blogmyApp','forummyApp',]);
-
+var app = angular.module('myApp', ['ngRoute','ngCookies','signmyApp','blogmyApp','forummyApp',])
+.run(run)
 app.config(function($routeProvider) {
   $routeProvider
   
@@ -35,6 +35,11 @@ app.config(function($routeProvider) {
     	controller:'userctrl'
     })
     
+    .when("/myprofile",{
+    	templateUrl: "html/Profile.html",
+    	controller:'Registercontroller'
+    })
+    
     .when("/myfriends",{
     	templateUrl: "html/friend.html",
     	controller:'myfriendctrl'
@@ -47,7 +52,15 @@ app.config(function($routeProvider) {
     .when('/chat', {
     templateUrl : 'html/Chat.html',
     controller  : 'chatController'
- });
+    	
+    	
+    	
+ })
+  
+  .when('/forumcommet', {
+	    templateUrl : 'html/SingleForum.html',
+	    controller  : 'commentctrl'
+	 });
 
 
 
