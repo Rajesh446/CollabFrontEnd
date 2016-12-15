@@ -57,7 +57,7 @@ app.config(function($routeProvider) {
     	
  })
   
-  .when('/forumcommet', {
+  .when('/individualForum', {
 	    templateUrl : 'html/SingleForum.html',
 	    controller  : 'commentctrl'
 	 });

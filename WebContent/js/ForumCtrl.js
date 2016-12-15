@@ -1,5 +1,5 @@
 var fapp = angular.module('forummyApp',[]);
-fapp.controller('forumcntrl', [ '$scope', '$http', function($scope, $http) {
+fapp.controller('forumcntrl', [ '$scope', '$http','$location','$rootScope', function($scope, $http, $location, $rootScope) {
 var BASE_URL = 'http://localhost:8081/MyChat';
 
 $scope.getAllForum= function() {
@@ -54,6 +54,21 @@ $scope.id=id;
 $scope.name=name;
 $scope.topic=topic;
 $scope.Description=Description;
+}
+
+$scope.getforum=function(id){
+	
+	console.log("iforum")
+	$http({
+		method: "GET",
+		url:BASE_URL+'/individualForum/'+id,
+	}).success(function(data,status,headers,config){
+		$location.path('/individualForum');
+		$rootScope.individualforums=data;
+		console.log(data)
+	}).error(function(data, status, headers, config) {
+		alert("Error");
+	});
 }
 
 

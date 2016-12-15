@@ -21,6 +21,7 @@ $scope.blog = {
 id:$scope.id,
 tittle : $scope.tittle,
 userid:$scope.userid,
+username:$scope.username,
 doc:$scope.doc,
 content : $scope.content,
 }
@@ -32,6 +33,7 @@ data : $scope.blog
 $scope.id='';
 $scope.tittle='';
 $scope.userid='';
+$scope.username='';
 $scope.doc='';
 $scope.content='';
 $scope.getAllBlogs();

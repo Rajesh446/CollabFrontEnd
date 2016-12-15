@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/" source-path="/WebContent/js"/>
         <wb-resource deploy-path="/" source-path="/WebContent/html"/>
         <wb-resource deploy-path="/" source-path="/WebContent/resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/lib"/>
         <property name="context-root" value="CollabFrontEnd"/>
         <property name="java-output-path" value="/CollabFrontEnd/build/classes"/>
     </wb-module>
