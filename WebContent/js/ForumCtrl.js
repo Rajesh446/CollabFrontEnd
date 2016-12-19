@@ -19,7 +19,7 @@ console.log("create forum")
 
 $scope.forum = { 
 id:$scope.id,
-Description : $scope.Description,
+description : $scope.description,
 userid:$scope.userid,
 doc:$scope.doc,
 topic:$scope.topic,
@@ -31,7 +31,7 @@ url : BASE_URL+'/CreateForum',
 data : $scope.forum
 }).success(function(data, status, headers, config) {
 $scope.id='';
-$scope.Description='';
+$scope.description='';
 $scope.userid='';
 $scope.doc='';
 $scope.name='';
@@ -49,11 +49,11 @@ url:BASE_URL+'/DeleteForum/'+id
 $scope.getAllForum();
 })
 };
-$scope.editforum=function(id,name,topic,Description){
+$scope.editforum=function(id,name,topic,description){
 $scope.id=id;
 $scope.name=name;
 $scope.topic=topic;
-$scope.Description=Description;
+$scope.description=description;
 }
 
 $scope.getforum=function(id){

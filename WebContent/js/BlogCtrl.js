@@ -54,4 +54,15 @@ $scope.id=id;
 $scope.tittle=tittle;
 $scope.content=content;
 }
+
+$scope.like=function(id){
+	console.log("inside like")
+	$http({
+		method : 'POST',
+		url : BASE_URL + '/likeblog/'+id,
+	}).success(function(data, status, headers, config) {
+		alert("success")
+	})
+	
+}
 }]);
