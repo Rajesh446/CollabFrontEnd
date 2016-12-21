@@ -60,7 +60,11 @@ app.config(function($routeProvider) {
   .when('/individualForum', {
 	    templateUrl : 'html/SingleForum.html',
 	    controller  : 'commentctrl'
-	 });
+	 })
+  .when("/jobs",{
+  	templateUrl: "job.html",
+  	controller: "jobctrl"
+  });
 
 
 

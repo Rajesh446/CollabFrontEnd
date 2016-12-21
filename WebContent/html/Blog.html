@@ -63,7 +63,8 @@ border-radius:1px;
 <p>{{blog.description}}</p>
 <hr>
 <p><button data-ng-click="editblog(blog.id,blog.tittle,blog.content)">edit</button>
-<button data-ng-click="deleteblog(blog.id)" class="btn btn-primary btn-danger">delete</button>
+<button data-ng-click="deleteblog(blog.id)">delete</button>
+<!-- <button data-ng-click="deleteblog(blog.id)" class="btn btn-primary btn-danger">delete</button> -->
 <!-- <button data-ng-click="like(blog.id)" class="btn btn-primary btn-danger">like</button><i class="fa fa-thumbs-up"></i>{{blog.bloglike}}</li></p>
  --><button  data-ng-click="like(blog.id)">Like</button>
 		<i class="fa fa-thumbs-up"></i>{{blog.bloglike}}</li>

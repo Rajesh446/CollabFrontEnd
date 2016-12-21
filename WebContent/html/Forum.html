@@ -61,8 +61,11 @@
 		<hr>
  <p>{{forum.description}}</p>
 	 
-	<button data-ng-click="deleteforum(forum.id)" class="btn btn-primary btn-danger">delete</button>
-	<button data-ng-click="editforum(forum.id,forum.name,forum.topic,forum.description)" class="btn btn-primary btn-danger">edit</button>
+	<!-- <button data-ng-click="deleteforum(forum.id)" class="btn btn-primary btn-danger">delete</button>
+	<button data-ng-click="editforum(forum.id,forum.name,forum.topic,forum.description)" class="btn btn-primary btn-danger">edit</button> -->
+	<p><button data-ng-click="editforum(forum.id,forum.name,forum.topic,forum.description)">Edit</button>
+<button data-ng-click="deleteforum(forum.id)">Delete</button>
+	
 	</div>
 	</div></div></div></div></div>
 	<script type="text/javascript" src="js/ForumCtrl.js"></script>
